@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interest Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: #cd1641;
+                display:flex;
+                height:100vh;
+                align-items: center;
+                justify-content: center;
+            }
+            h3{
+                font-size: 1.5rem;
+                font-family: helvetica;
+                text-align:center;
+                margin-top:4%;
+            }
+            input{
+                width:100%;
+                border:1px solid black;
+                font-family:times new roman;
+                font-size:1.9rem;
+                border-radius:25px;
+                text-align:center;
+                margin-top:3%;
+            }
+            .btn{
+                width:50%;
+                font-size:1rem;
+                border:none;
+                font-family:monospace;
+                text-align:center;
+                margin-top:8%;
+                margin-left:25%;
+                background-color:rgb(81, 81, 159);
+                color:white;
+                padding:10px;
+                border-radius:25px;
+            }
+            .btn:hover{
+                transition: 0.5s ease;
+                background-color:transparent;
+                color:black;
+            }
+            .res{
+                font-size:50rem;
+                font-family:monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function calculate(){
+                var principal = 0;
+                var rate = 0;
+                var year = 0;
+                var SI = 0;
+                principal = parseInt(document.getElementById("pr").value);
+                year = parseInt(document.getElementById("yr").value);
+                rate = parseInt(document.getElementById("roi").value);
+                SI = (principal*year*rate)/100;
+                document.getElementById("res").innerHTML=SI;
+            }
+        </script>
+        <div class="container">
+            <h3>Enter Principal Amount+</h3>
+            <input type="text" id="pr">
+            <h3>Enter Rate of Interest</h3>
+            <input type="text" id="roi">
+            <h3>Enter Years</h3>
+            <input type="text" id="yr">
+            <button class="btn" onclick="calculate()">Calculate</button>
+            <br>
+            <br>
+            <span id="res">Rs</span>
+        </div>
+    </body>
+</html>
