@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* Static positioning */
+            div.static{
+                position: static;
+                border: 3px solid rgba(94, 36, 138, 0.867);
+            }
+
+            /* Relative positioning */
+            
+            div.relative{
+                position: relative;
+                left: 30px;
+                border: 3px solid rgba(36, 138, 133, 0.8)
+            }
+
+            /* Absolute positioning */
+
+            div.absolute{
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                border: 3px solid #73AD21
+            }
+        </style>
+    </head>
+    <body bgcolor="pink" align="center">
+
+        <!-- Static positioning -->
+        <h2>position: static;</h2>
+
+        <p>An element with position: static; is not positioned in any special way; it is always positioned according to normal flow of the page:</p>
+
+        <div class="static">
+            This division element has position: static;            
+        </div>
+        
+        <!-- Relative positioning -->
+        <h2>position: relative;</h2>
+
+        <p>An element with position: relative; is not positioned relative to its normal position: </p>
+
+        <div class="relative">
+            This division element has position: relative;
+        </div>
+
+        <h2>position: absolute;</h2>
+
+        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+        <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+        </div>
+
+    </body>
+</html>
